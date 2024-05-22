@@ -14,6 +14,7 @@
 		<p>Submitted to NeurIPS 2024</p>
 	</header>
 	<main>
+	<center>
 		<section class="abstract">
 			<h2>Abstract</h2>
 			<p>We introduce a simple and fast text-controllable high-fidelity music generation and editing model.
@@ -23,26 +24,261 @@
 				Evaluations are conducted on both objective and subjective metrics and demonstrate that the proposed model is not only superior to the evaluated baseline on a standard text-to-music benchmark but also benefits from impressive style-transfer capabilities that are inherent to the model design.
 				Model implementation and weights will be publicly made available to foster further research on music editing.</p>
 		</section>
-		<section class="audio-demos">
-			<h2>Text-to-Music Generation Demos</h2>
-			<div class="demo">
-				<h3>MelodyFlow</h3>
-				<audio controls>
-					<source src="audio/demo1.mp3" type="audio/mp3">
-					Your browser does not support the audio element.
-				</audio>
-				<button class="play-pause">Play</button>
-			</div>
-			<div class="demo">
-				<h3>Ground Truth</h3>
-				<audio controls>
-					<source src="audio/demo2.mp3" type="audio/mp3">
-					Your browser does not support the audio element.
-				</audio>
-				<button class="play-pause">Play</button>
-			</div>
-			<!-- Add more demo sections here -->
+	</center>
+	<center><h2>Music Style Transfer on 30 seconds of music</h2></center>
+	<h4>Source text:</h4>
+	<p>Laid back classic rock, electric guitar lead, rock fiddle accents. Moods: Familiar groove, retro, nostalgic. Key words: Classic rock, radio song, relaxed rock, concerts</p>
+	<h4>Target text:</h4>
+	<p>A high-energy genre bending Latin inspired rock anthem with good vibes.</p>
+	<section class="audio-demos">
+
+		<div class="demo">
+			<center><h3>Ground Truth</h3></center>
+			<audio controls>
+				<source src="audios/ref_1.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + DDIM inversion</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_DDIM_1.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + our inversion w/ T_edit=0.0</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_0.0_1.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + our inversion w/ T_edit=0.0625</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_0.0625._1.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
 		</section>
+
+	<h4>Source text:</h4>
+	<p>Smooth jazz, soulful female vocal over Rhodes piano, upright bass, brushed drums. Moods: Retro vocal, modern jazz, sultry.</p>
+	<h4>Target text:</h4>
+	<p>Modern R & B, soulful female vocal over electronic synth, drums, bass. Moods: Retro vocal, modern music, sexy.</p>
+	<section class="audio-demos">
+
+		<div class="demo">
+			<center><h3>Ground Truth</h3></center>
+			<audio controls>
+				<source src="audios/ref_2.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + DDIM inversion</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_DDIM_2.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + our inversion w/ T_edit=0.0</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_0.0_2.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + our inversion w/ T_edit=0.0625</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_0.0625._2.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		</section>
+
+
+	<h4>Source text:</h4>
+	<p>Laid back classic rock, electric guitar lead, rock fiddle accents. Moods: Familiar groove, retro, nostalgic. Key words: Classic rock, radio song, relaxed rock, concerts.</p>
+	<h4>Target text:</h4>
+	<p>Laid back Indian classical, sitar lead, tabla accents. Moods: Familiar groove, retro, nostalgic. Key words: Indian classical, radio song, relaxed Indian, concerts.</p>
+	<section class="audio-demos">
+
+		<div class="demo">
+			<center><h3>Ground Truth</h3></center>
+			<audio controls>
+				<source src="audios/ref_3.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + DDIM inversion</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_DDIM_3.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + our inversion w/ T_edit=0.0</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_0.0_3.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + our inversion w/ T_edit=0.0625</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_0.0625._3.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		</section>
+
+	<h4>Source text:</h4>
+	<p>Rock and low key hip hop fusion. Some elements of surf rock - electric guitar, bass, synth, organ layers, synth accents, MPC drums.</p>
+	<h4>Target text:</h4>
+	<p>Middle Eastern and low key folk fusion. Some elements of Arabic rock - oud, bass, qraqeb layers, ney accents, darbuka drums.</p>
+	<section class="audio-demos">
+
+		<div class="demo">
+			<center><h3>Ground Truth</h3></center>
+			<audio controls>
+				<source src="audios/ref_4.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + DDIM inversion</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_DDIM_4.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + our inversion w/ T_edit=0.0</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_0.0_4.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + our inversion w/ T_edit=0.0625</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_0.0625._4.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		</section>
+
+	<h4>Source text:</h4>
+	<p>Upbeat African drum solo featuring authentic instrument the Talking Drum (adjustable pitch drum). Moods: Tribal, energetic, exhilarating. Key words: African, upbeat, traditional.</p>
+	<h4>Target text:</h4>
+	<p>Upbeat Samba drum solo featuring authentic instrument the Surdo (adjustable pitch drum). Moods: Carnival, energetic, exhilarating. Key words: Brazilian, upbeat, traditional.</p>
+	<section class="audio-demos">
+
+		<div class="demo">
+			<center><h3>Ground Truth</h3></center>
+			<audio controls>
+				<source src="audios/ref_5.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + DDIM inversion</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_DDIM_5.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + our inversion w/ T_edit=0.0</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_0.0_5.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + our inversion w/ T_edit=0.0625</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_0.0625._5.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		</section>
+
+	<h4>Source text:</h4>
+	<p>Quirky guitar driven rock song with heavy fx that give it an almost robotic sound. Or that of a duck. Keys, guitar, drums, bass, synth. Upbeat, happy, positive, futuristic.</p>
+	<h4>Target text:</h4>
+	<p>Quirky saxophone driven jazz tune with heavy reverb that give it an almost robotic sound. Or that of a duck. Keys, saxophone, drums, upright bass, vibraphone. Upbeat, happy, positive, futuristic.</p>
+	<section class="audio-demos">
+
+		<div class="demo">
+			<center><h3>Ground Truth</h3></center>
+			<audio controls>
+				<source src="audios/ref_6.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + DDIM inversion</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_DDIM_6.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + our inversion w/ T_edit=0.0</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_0.0_6.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + our inversion w/ T_edit=0.0625</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_0.0625._6.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		</section>
+
+	<h4>Source text:</h4>
+	<p>Reggae track with uplifting vibes to bob your head to. Clav and Horn call and response, happy rhythm, horn driven melodies and guitar splashes with a jazzy groove. Keywords: reggae, beach, jamming</p>
+	<h4>Target text:</h4>
+	<p>Traditional Asian-inspired track with uplifting vibes to sway to. Shamisen and Erhu call and response, happy rhythm, Erhu-driven melodies and Koto splashes with a folkloric groove. Keywords: Asian, folk, jamming</p>
+	<section class="audio-demos">
+
+		<div class="demo">
+			<center><h3>Ground Truth</h3></center>
+			<audio controls>
+				<source src="audios/ref_7.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + DDIM inversion</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_DDIM_7.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + our inversion w/ T_edit=0.0</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_0.0_7.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="demo">
+			<center><h3>MelodyFlow + our inversion w/ T_edit=0.0625</h3></center>
+			<audio controls>
+				<source src="audios/T_edit_0.0625._7.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		</section>
+
 	</main>
 	<footer>
 		<center><p>&copy; 2024 MelodyFlow. All rights reserved.</p></center>

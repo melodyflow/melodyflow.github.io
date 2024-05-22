@@ -4,11 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	audioElements.forEach(function(audio) {
 		const button = audio.nextElementSibling;
 		audio.addEventListener("play", function() {
-			button.innerHTML = "Pause";
 			button.classList.add("playing");
 		});
 		audio.addEventListener("pause", function() {
-			button.innerHTML = "Play";
 			button.classList.remove("playing");
 		});
 	});
